@@ -30,8 +30,8 @@ def shorten_link(token, url):
     response = requests.post(api_url, json=payload, headers=headers)
     response.raise_for_status()
 
-    shorten_link = response.json()
-    bitlink = shorten_link['id']
+    shortened_url = response.json()
+    bitlink = shortened_url['id']
 
     return bitlink
 

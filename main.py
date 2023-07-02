@@ -61,22 +61,18 @@ if __name__ == '__main__':
     args = parser.parse_args()
     user_input = args.url
 
+    url_parts = urlparse(user_input)
+    input_url = url_parts.netloc if url_parts.netloc else url_parts.path
+
     try:
         if is_bitlink(token, user_input):
-            url_parts = urlparse(user_input)
-            input_url = url_parts.netloc if url_parts.netloc else url_parts.path
             clicks = count_clicks(token, input_url)
             print('Количество кликов:', clicks)
         else:
-            url_parts = urlparse(user_input)
-            input_url = url_parts.netloc if url_parts.netloc else url_parts.path
-            if url_parts.scheme:
-                url_for_short = user_input
-            else:
-                url_for_short = 'https://' + input_url
+            url_for_short = user_input if url_parts.scheme else f'https://{input_url}'
             bitlink = shorten_link(token, url_for_short)
             print('Битлинк:', bitlink)
 
     except requests.exceptions.HTTPError:
         print('Ошибка: Убедитесь, что ввели адрес корректно')
-
+        

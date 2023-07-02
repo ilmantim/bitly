@@ -29,11 +29,40 @@ BITLY_TOKEN=8c427fcc432fabf72bf41d5dfss783b85444d13b2566f98f5
 #### Как получить
 
 * Зарегистрируйтесь на сайте [Bitly](https://app.bitly.com/Bn61cRr7yT8/onboard/) и получите `Bitly token`:
-![] (https://app.bitly.com/Bn61cRr7yT8/onboard/)
+![](https://app.bitly.com/Bn61cRr7yT8/onboard/)
 
 ## Запуск
 
+Запуск на Linux(Python 3) или Windows:
 
+```bash
+
+$ python main.py dvmn.org
+
+```
+
+Вы увидите:
+
+```bash
+
+$ Битлинк: bit.ly/3NezQby
+
+```
+
+ Узнать количество кликов сокращенной ссылки:
+
+```bash
+
+$ python main.py bit.ly/3NezQby
+
+```
+Вы увидите:
+
+```bash
+
+$ Количество кликов: 5
+
+```
 
 ## Цель проекта
 

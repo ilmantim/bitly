@@ -28,8 +28,7 @@ BITLY_TOKEN=8c427fcc432fabf72bf41d5dfss783b85444d13b2566f98f5
 
 #### Как получить
 
-* Зарегистрируйтесь на сайте [Bitly](https://app.bitly.com/Bn61cRr7yT8/onboard/) и получите `Bitly token`:
-![](https://app.bitly.com/Bn61cRr7yT8/onboard/)
+* Зарегистрируйтесь на сайте [Bitly](https://app.bitly.com/Bn61cRr7yT8/onboard/) и воспользуйтесь [генератором токенов](https://app.bitly.com/settings/api/).
 
 ## Запуск
 
@@ -67,6 +66,5 @@ $ Количество кликов: 5
 ## Цель проекта
 
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
-
 
 
